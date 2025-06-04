@@ -426,6 +426,45 @@
             padding: 80px 0;
         }
 
+        /* Tab Styles */
+        .work-tabs {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .tab-container {
+            display: inline-flex;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-tab {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: transparent;
+            color: #4a5568;
+        }
+
+        .section-tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .work-section {
+            display: none;
+        }
+
+        .work-section.active {
+            display: block;
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -470,6 +509,17 @@
             animation: pulse 2s ease-in-out infinite;
         }
 
+        .experience-badge {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -487,6 +537,12 @@
             margin-bottom: 24px;
             font-size: 16px;
             line-height: 1.6;
+        }
+
+        .company-info {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
 
         .tech-stack {
@@ -570,6 +626,10 @@
             transition: all 0.3s ease;
             border: 3px solid transparent;
             background-clip: padding-box;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .contact-card:hover {
@@ -593,15 +653,10 @@
             font-weight: 700;
         }
 
-        .contact-card a {
+        .contact-card .contact-text {
             color: #4a5568;
-            text-decoration: none;
             font-size: 16px;
             font-weight: 500;
-        }
-
-        .contact-card a:hover {
-            color: #667eea;
         }
 
         /* Mobile Responsive */
@@ -654,12 +709,12 @@
 
     <header>
         <nav>
-            <div class="logo">Sahar ✨</div>
+            <div class="logo">Sahar</div>
             <ul class="nav-menu">
-                <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
-                <li><a href="#" onclick="showPage('about')">About</a></li>
-                <li><a href="#" onclick="showPage('work')">Work</a></li>
-                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('home')" class="active">Home</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('about')">About</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('work')">Work</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -670,13 +725,13 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>Hi! I'm <span class="highlight">Sahar</span> 👋</h1>
+                        <h1>Hi! I'm <span class="highlight">Sahar</span></h1>
                         <div class="subtitle">
-                            An Aspiring Full-Stack Developer & IT Support Specialist from Melbourne, Australia 🇦🇺
+                            An Aspiring Full-Stack Developer & IT Support Specialist from Melbourne, Australia
                         </div>
                         <div class="hero-buttons">
-                            <a href="#" onclick="showPage('work')" class="btn btn-primary">View My Work ✨</a>
-                            <a href="#" onclick="showPage('contact')" class="btn btn-secondary">Let's Chat! 💬</a>
+                            <a href="javascript:void(0)" onclick="showPage('work')" class="btn btn-primary">View My Work</a>
+                            <a href="javascript:void(0)" onclick="showPage('contact')" class="btn btn-secondary">Let's Chat!</a>
                         </div>
                     </div>
                     <div class="hero-character">
@@ -692,32 +747,32 @@
         <section class="about">
             <div class="container">
                 <div class="about-content">
-                    <h2 class="section-title">About Me ✨</h2>
+                    <h2 class="section-title">About Me</h2>
                     <div class="about-grid">
                         <div class="character-container">
                             <div class="about-character">🎨</div>
                         </div>
                         <div class="about-text">
-                            <h3>Creative Problem Solver 🧩</h3>
-                            <p>I'm graduating with a Master of Information Technology in July 2025, ready to bring fresh energy and creativity to the tech world! 🎓</p>
+                            <h3>Creative Problem Solver</h3>
+                            <p>I'm graduating with a Master of Information Technology in July 2025, ready to bring fresh energy and creativity to the tech world!</p>
                             
-                            <p>My superpower? Taking complex problems and turning them into elegant solutions. Whether I'm debugging code or designing user experiences, I approach everything with curiosity and creativity! 🌟</p>
+                            <p>My superpower? Taking complex problems and turning them into elegant solutions. Whether I'm debugging code or designing user experiences, I approach everything with curiosity and creativity!</p>
                             
-                            <p>When I'm not coding, you'll find me mentoring students, teaching programming, or working on award-winning projects that make a real difference in people's lives. Ready to join an amazing team and create something awesome together! 🚀</p>
+                            <p>When I'm not coding, you'll find me mentoring students, teaching programming, or working on award-winning projects that make a real difference in people's lives. Ready to join an amazing team and create something awesome together!</p>
                             
                             <div class="skills-container">
-                                <h4 style="font-size: 20px; margin-bottom: 16px; color: #2d3748;">My Tech Stack 🛠️</h4>
+                                <h4 style="font-size: 20px; margin-bottom: 16px; color: #2d3748;">My Tech Stack</h4>
                                 <div class="skills-grid">
-                                    <div class="skill-item">Java ☕</div>
-                                    <div class="skill-item">Python 🐍</div>
-                                    <div class="skill-item">JavaScript ⚡</div>
-                                    <div class="skill-item">React ⚛️</div>
-                                    <div class="skill-item">Vue.js 💚</div>
-                                    <div class="skill-item">MySQL 🗄️</div>
-                                    <div class="skill-item">Firebase 🔥</div>
-                                    <div class="skill-item">Git 🌿</div>
-                                    <div class="skill-item">UX Design 🎨</div>
-                                    <div class="skill-item">Leadership 👑</div>
+                                    <div class="skill-item">Java</div>
+                                    <div class="skill-item">Python</div>
+                                    <div class="skill-item">JavaScript</div>
+                                    <div class="skill-item">React</div>
+                                    <div class="skill-item">Vue.js</div>
+                                    <div class="skill-item">MySQL</div>
+                                    <div class="skill-item">Firebase</div>
+                                    <div class="skill-item">Git</div>
+                                    <div class="skill-item">UX Design</div>
+                                    <div class="skill-item">Leadership</div>
                                 </div>
                             </div>
                         </div>
@@ -732,58 +787,110 @@
         <section class="projects">
             <div class="container">
                 <div class="projects-content">
-                    <h2 class="section-title">My Creative Works 🎨</h2>
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="award-badge">🏆 Award Winner</div>
-                            <h3>Cyberbullying Awareness Platform 🛡️</h3>
-                            <p>Won first place in Industry Mentors Award competition! Coordinated cross-functional team of 5 developers using Agile methodology. Created comprehensive website supporting teens with crisis resources and interactive features. 🏆</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">React ⚛️</span>
-                                <span class="tech-tag">JavaScript ⚡</span>
-                                <span class="tech-tag">Agile 🔄</span>
-                                <span class="tech-tag">Team Lead 👥</span>
-                                <span class="tech-tag">Figma 🎨</span>
+                    <h2 class="section-title">My Creative Works</h2>
+                    
+                    <div class="work-tabs">
+                        <div class="tab-container">
+                            <button onclick="showSection('projects')" id="projects-tab" class="section-tab active">Projects</button>
+                            <button onclick="showSection('experience')" id="experience-tab" class="section-tab">Experience</button>
+                        </div>
+                    </div>
+
+                    <div id="projects-section" class="work-section active">
+                        <div class="projects-grid">
+                            <div class="project-card">
+                                <div class="award-badge">Award Winner</div>
+                                <h3>Cyberbullying Awareness Platform</h3>
+                                <p>Won first place in Industry Mentors Award competition! Coordinated cross-functional team of 5 developers using Agile methodology. Created comprehensive website supporting teens with crisis resources and interactive features.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Agile</span>
+                                    <span class="tech-tag">Team Lead</span>
+                                    <span class="tech-tag">Figma</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://wordwecreated.org" class="project-link live-link" target="_blank">Live Site</a>
+                                    <a href="https://www.figma.com/design/3d05tsbkb9fVPRYjfwEDdp/Untitled?node-id=0-1&t=JhYicVYGZI5ggisN-1" class="project-link design-link" target="_blank">Design Process</a>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="https://wordwecreated.org" class="project-link live-link" target="_blank">Live Site 🌐</a>
-                                <a href="https://www.figma.com/design/3d05tsbkb9fVPRYjfwEDdp/Untitled?node-id=0-1&t=JhYicVYGZI5ggisN-1" class="project-link design-link" target="_blank">Design Process 🎨</a>
+
+                            <div class="project-card">
+                                <h3>UV Shield Protection App</h3>
+                                <p>Built React-based web application providing real-time UV index data through API integration. Helps people stay safe in the sun with personalized recommendations!</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">API Integration</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Responsive</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://uv-shield.pages.dev/" class="project-link live-link" target="_blank">Try It Out</a>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <h3>Mental Health Support Platform</h3>
+                                <p>Developed responsive website with Firebase real-time database integration for mental health resources. Focused on accessibility and empathetic design!</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">Real-time DB</span>
+                                    <span class="tech-tag">Accessibility</span>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <h3>Computer Networks Lab</h3>
+                                <p>Configured VLANs and firewall rules in virtualized environment using Oracle VirtualBox. Used Wireshark for network traffic analysis and troubleshooting!</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">VirtualBox</span>
+                                    <span class="tech-tag">VLANs</span>
+                                    <span class="tech-tag">Wireshark</span>
+                                    <span class="tech-tag">Networking</span>
+                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="project-card">
-                            <h3>UV Shield Protection App ☀️</h3>
-                            <p>Built React-based web application providing real-time UV index data through API integration. Helps people stay safe in the sun with personalized recommendations! 🧴</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">React ⚛️</span>
-                                <span class="tech-tag">API Integration 🔮</span>
-                                <span class="tech-tag">JavaScript ⚡</span>
-                                <span class="tech-tag">Responsive 📱</span>
+                    <div id="experience-section" class="work-section">
+                        <div class="projects-grid">
+                            <div class="project-card">
+                                <div class="experience-badge">Current Role</div>
+                                <h3>IT Peer Mentor</h3>
+                                <p class="company-info">Monash University • Jun 2024 – Present</p>
+                                <p>Mentored 20+ students by diagnosing technical issues with university platforms. Conducted monthly workshops on university software and tools.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Technical Support</span>
+                                    <span class="tech-tag">Troubleshooting</span>
+                                    <span class="tech-tag">Training</span>
+                                    <span class="tech-tag">Mentoring</span>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="https://uv-shield.pages.dev/" class="project-link live-link" target="_blank">Try It Out 🚀</a>
-                            </div>
-                        </div>
 
-                        <div class="project-card">
-                            <h3>Mental Health Support Platform 🌱</h3>
-                            <p>Developed responsive website with Firebase real-time database integration for mental health resources. Focused on accessibility and empathetic design! 💚</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">JavaScript ⚡</span>
-                                <span class="tech-tag">Firebase 🔥</span>
-                                <span class="tech-tag">Real-time DB 🗄️</span>
-                                <span class="tech-tag">Accessibility ♿</span>
+                            <div class="project-card">
+                                <div class="experience-badge">Current Role</div>
+                                <h3>Technical Support Specialist</h3>
+                                <p class="company-info">Code Camp • Oct 2023 – Present</p>
+                                <p>Provided technical support to 20+ students daily, resolving connectivity, password, and software issues. Configured routers, VLANs, and firewalls across 5+ school locations!</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Help Desk</span>
+                                    <span class="tech-tag">Network Config</span>
+                                    <span class="tech-tag">User Management</span>
+                                    <span class="tech-tag">VLANs</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="project-card">
-                            <h3>Computer Networks Lab 🌐</h3>
-                            <p>Configured VLANs and firewall rules in virtualized environment using Oracle VirtualBox. Used Wireshark for network traffic analysis and troubleshooting! 🔧</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">VirtualBox 📦</span>
-                                <span class="tech-tag">VLANs 🌐</span>
-                                <span class="tech-tag">Wireshark 🔍</span>
-                                <span class="tech-tag">Networking 🔗</span>
+                            <div class="project-card">
+                                <h3>Space Utilization Auditor</h3>
+                                <p class="company-info">Monash University • 2025</p>
+                                <p>Performed systematic data collection and analysis to assess campus technology and efficiency in space utilization. Data-driven insights for better resource management!</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Data Analysis</span>
+                                    <span class="tech-tag">System Assessment</span>
+                                    <span class="tech-tag">Reporting</span>
+                                    <span class="tech-tag">Efficiency</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -797,21 +904,21 @@
         <section class="contact">
             <div class="container">
                 <div class="contact-content">
-                    <h2 class="section-title">Let's Create Something Amazing! 🚀</h2>
+                    <h2 class="section-title">Let's Create Something Amazing!</h2>
                     <p style="color: #4a5568; font-size: 20px; margin-bottom: 40px;">
-                        Ready to start my IT career and bring fresh energy to your team! ⚡
+                        Ready to start my IT career and bring fresh energy to your team!
                     </p>
                     <div class="contact-grid">
-                        <div class="contact-card">
+                        <a href="mailto:sahartorki@icloud.com" class="contact-card">
                             <span class="icon">📧</span>
                             <h3>Email Me</h3>
-                            <a href="mailto:sahartorki@icloud.com">sahartorki@icloud.com</a>
-                        </div>
-                        <div class="contact-card">
+                            <div class="contact-text">sahartorki@icloud.com</div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sahar-torki-1450282b3" target="_blank" class="contact-card">
                             <span class="icon">💼</span>
                             <h3>LinkedIn</h3>
-                            <a href="https://www.linkedin.com/in/sahar-torki-1450282b3" target="_blank">Let's Connect!</a>
-                        </div>
+                            <div class="contact-text">Let's Connect!</div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -830,6 +937,24 @@
             
             // Scroll to top with smooth animation
             window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function showSection(sectionId) {
+            // Hide all work sections
+            document.querySelectorAll('.work-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.section-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId + '-section').classList.add('active');
+            
+            // Highlight active tab
+            document.getElementById(sectionId + '-tab').classList.add('active');
         }
 
         // Add fun interactions
@@ -917,3 +1042,5 @@
             document.head.appendChild(style);
         });
     </script>
+</body>
+</html>
